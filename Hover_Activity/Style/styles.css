@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #1d1d1f; */
+    cursor: grabbing;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    min-width: 100px;
+    /* border-radius: 0.5rem; */
+    /* background-color: rgba(255, 255, 255, 0.8);
+    margin: 5px;
+    box-shadow: 0 0 8px rgb(0, 255, 255); */
+    transition: background-color 10s ease-in-out;
+    overflow: hidden;
+}
+
+.container span::before {
+    content: '';
+    position: absolute;
+    /* background: url(https://wallpapercave.com/wp/wp5915476.jpg); */
+    /* background: url("https://c4.wallpaperflare.com/wallpaper/530/450/360/singers-billie-eilish-hd-wallpaper-preview.jpg"); */
+    background: url("../images/hansohee.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 15s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container span:hover::before {
+    transition: 0s;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
