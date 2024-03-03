@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    color:aliceblue;
+}
+
+body{
+    background-color: #1d1d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.letters{
+    perspective: 1000px;
+
+    .letter{
+        overflow: hidden;
+        display: inline-block;
+        user-select: none;
+        line-height: 1;
+        font-size: 6rem;
+        letter-spacing: 1rem;
+        font-weight: bold;
+
+        &.active{
+            animation: jump 1.5s ease-in-out;
+            transform-origin: bottom left;
+            transition: 1s;
+        }
+    }
+}
+
+.letter {
+    text-shadow: 0px 10px 10px black;
+    animation: all 1s ease-in-out infinite;
+    font-weight: 500;
+}
+
+
+
+@keyframes jump{
+    0% {
+        transform: translate(0,0) rotate(180deg);
+    }
+    25% {
+        transform: scale(4) translate(100px, -180px);
+    }
+    75% {
+        transform: scale(1.1) translate(-200px, 200px);
+    }
+    100% {
+        transform: translate(0,0) rotate(360deg);
+    }
+}

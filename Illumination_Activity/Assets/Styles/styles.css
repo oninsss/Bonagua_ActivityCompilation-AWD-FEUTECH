@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: red;
+    overflow: hidden;
+}
+
+body{
+    background-image: url(https://j.gifs.com/vb44pB.gif);
+    cursor: url('Images/cursor.png');
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(7, 7, 7), black );
+    position: relative;
+
+
+    .word{
+        font-size: 10rem;
+
+        img{
+            width: 99vw;
+            height: 100vh;
+        }
+    }
+}
+
+.illumination{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at var(--x) var(--y),
+        transparent -20%,
+        rgb(0, 0, 0) 20%
+    );
+}
