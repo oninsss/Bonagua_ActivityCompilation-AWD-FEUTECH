@@ -31,6 +31,17 @@ body{
         width: 100%;
         gap: 20px;
 
+        .burger{
+            width: fit-content;
+            border-radius: 50%;
+            padding: 0 10px 5px 10px;
+            
+            &:hover{
+                background-color: #363639;
+                cursor: pointer;
+            }
+        }
+
         img{
             max-width: 24px;
             max-height: 24px;
@@ -83,6 +94,8 @@ body{
             background-color: transparent;
             justify-content: end;
             border: none;
+            
+            
 
             svg{
                 margin-top: 3px;
@@ -92,11 +105,16 @@ body{
             }
         }
 
-        .mic{
+            .mic{
             background-color: #1d1d1f;
             padding: 3px 8px 3px 8px;
             border-radius: 50%;
             margin-left: 20px;
+            
+            &:hover{
+                background-color: #363639;
+                cursor: pointer;
+            }
 
             svg{
                 margin-top: 3px;
@@ -412,7 +430,53 @@ body{
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .slider .slides:nth-child(3) {
+        left: calc(50% - 200px);
+        top: 88.5%;
+    }
+
+    .slider .slides:nth-child(4) {
+        left: calc(50% - 50px);
+        top: 88.5%;
+    }
+
+    .slider .slides:nth-child(5) {
+        left: calc(50% + 100px);
+        top: 88.5%;
+    }
+
+    .buttons{
+        top: 45%;
+
+    }
+
+    .slider{
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar{
+        .logo{
+            width: 350px;
+        }
+
+        .searchBar{
+            width: 500px;
+            button{
+                width: 200px;
+            }
+            
+            
+        }
+        .right{
+            gap: 10px;
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width:425px) {
     .slider .slides:nth-child(3) {
         left: 25px;
         top: 88.5%;
@@ -441,6 +505,7 @@ body{
     .navbar{
         .logo{
             width: 350px;
+            gap: 2px;
         }
 
         .searchBar{
@@ -448,10 +513,14 @@ body{
             button{
                 width: 20px;
             }
+            .mic{
+                margin-left: 5px;
+            }
             
         }
         .right{
             gap: 10px;
+            margin-top: 10px;
             width: 200px;
         }
     }
